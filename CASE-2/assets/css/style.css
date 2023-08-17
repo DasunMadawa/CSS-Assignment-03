@@ -1,6 +1,6 @@
 nav  {
     height: 8vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     background-color: white;
 }
@@ -46,67 +46,83 @@ nav > div:nth-child(2) > ol > li {
 /*side bar*/
 section {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    width: 100vw;;
+    width: 100%;;
+    background-color: red;
     position: relative;
 
 }
 
-section > main:first-child {
-    width: 17vw;
+section > div:first-child {
+    width: 17%;
+    height: 100%;
+    position: absolute;
     background-color: #4C0083;
 }
 
-section > main:first-child > ol > li {
+section > div:first-child > li {
     margin-top: 3vh;
+    margin-left: 2vw;
     display: block;
     color: white;
 }
 
 
 /*content*/
-section > main:nth-child(2) {
+section > div:nth-child(2) {
     border-top: 4px solid black;
-    width: 81vw;
+    width: 81%;
     background-color: white;
-    padding: 1vw;
+    padding: 1%;
+    position: relative;
+    left: 17%;
 
 }
 
-section > main:nth-child(2) > div {
-    display: flex;
-    width: 81vw;
-    height: auto;
-    border: 2px solid red;
-    border-bottom: 2px solid green;
-    padding-right: 4px;
+section > div:nth-child(2) > div {
+    position: relative;
+    /*padding-right: 4px;*/
 
 }
 
-section > main:nth-child(2) > p {
+section > div:nth-child(2) > p {
     justify-content: center;
 }
 
-section > main:nth-child(2) > div > img {
+section > div:nth-child(2) > div > img {
+    position: relative;
     width: 27vw;
-    height: auto;
-    padding: 0;
+    aspect-ratio: auto;
+    border: 2px solid red;
+    border-bottom: 2px solid green;
 
 }
 
-section > main:nth-child(2) > div > img:nth-child(2) {
+section > div:nth-child(2) > div > img:nth-child(2) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+section > div:nth-child(2) > div > img:nth-child(3) {
+    position: absolute;
+    right: 0;
+
+}
+
+section > div:nth-child(2) > div > img:nth-child(2) {
+    z-index: 10;
     border-left: 2px solid green;
     border-right: 2px solid green;
 }
 
 body > div {
     background-color: grey;
-    width: 98vw;
-    height: auto;
+
     text-align: center;
-    padding: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     font-family: 'Roboto', sans-serif;
 
 }
 
-/*fonts*/
